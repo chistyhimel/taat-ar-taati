@@ -33,8 +33,8 @@ export const ProductCardSecondaryContainer = styled.div`
     );
 
     .overlay__content {
-      height: 28%;
-      width: 100%;
+      /* height: 28%;
+      width: 100%; */
       position: absolute;
       bottom: 0;
       padding: 0 0 5% 10%;
@@ -43,6 +43,7 @@ export const ProductCardSecondaryContainer = styled.div`
       justify-content: space-between;
       P {
         font-size: ${({ theme }) => theme.fontSize.header.largeScreen};
+        padding-bottom: 15px;
       }
       div {
         display: flex;

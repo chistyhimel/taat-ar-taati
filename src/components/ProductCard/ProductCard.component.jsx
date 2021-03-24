@@ -7,14 +7,17 @@ import {
 } from "./ProductCard.style";
 import img1 from "../../assets/images/model-img-1.png";
 import img2 from "../../assets/images/model-img-1-hover.png";
+import { useHistory } from "react-router";
 
-const ProductCard = () => {
+const ProductCard = ({ img, idx }) => {
+  const history = useHistory();
+  console.log(img);
   return (
     <>
-      <ProductCardConatiner>
+      <ProductCardConatiner onClick={() => history.push("/product-info")}>
         <CardImgContainer>
-          <img src={img1} alt="" />
-          <img src={img2} alt="" />
+          <img src={img.img1} alt="" />
+          <img src={img.img1Hover} alt="" />
         </CardImgContainer>
         <br />
         <CardText>Bagru Linen Silk Hand Block Printed Saree</CardText>

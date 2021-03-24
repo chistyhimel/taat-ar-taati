@@ -41,6 +41,20 @@ export const ProductImgContainer = styled.div`
     outline: none;
     border: 4px solid ${({ theme }) => theme.colors.primary};
   }
+  /* .image-gallery-content.fullscreen {
+    width: 50vw;
+    height: 50vh;
+    z-index: 990;
+    background: #fff;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .image-gallery.fullscreen-modal {
+    background: none;
+  } */
 `;
 
 export const ProductsDetailsContainer = styled.div`

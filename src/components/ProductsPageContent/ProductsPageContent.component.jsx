@@ -2,6 +2,7 @@ import { faTh, faThLarge } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { Container } from "../../constants/container";
+import { images } from "../ProductCard/data";
 import ProductCard from "../ProductCard/ProductCard.component";
 import {
   LayoutCustomizeIcon,
@@ -40,11 +41,9 @@ const ProductsPageContent = () => {
 
         <Container>
           <ProductsContainer changeLayout={changeLayout}>
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
+            {images.map((img, idx) => (
+              <ProductCard key={idx} img={img} idx={idx} />
+            ))}
           </ProductsContainer>
         </Container>
       </ProductsPageContentContainer>

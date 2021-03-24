@@ -7,7 +7,7 @@ export const CartSidebarContainer = styled.div`
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 3;
+  z-index: 11;
   box-shadow: 2px 0 10px rgb(54 54 54 / 20%), -2px 0 10px rgb(54 54 54 / 20%);
   transform: ${({ cartSidebarOpen }) =>
     cartSidebarOpen ? "translateX(0)" : "translateX(140%)"};

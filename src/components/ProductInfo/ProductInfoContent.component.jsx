@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import modelImg from "../../assets/images/model-img-3.jpg";
 import {
   ProductImgContainer,
   ProductInfoContentContainer,
@@ -18,37 +17,45 @@ import {
 import axios from "axios";
 import "react-image-gallery/styles/css/image-gallery.css";
 import ImageGallery from "react-image-gallery";
+import modelImg1 from "../../assets/images/model-img-1.png";
+import modelImg2 from "../../assets/images/model-img-3.png";
+import modelImg3 from "../../assets/images/model-img-4.png";
+import modelImg4 from "../../assets/images/model-img-5.png";
 
 const ProductInfoContent = () => {
   // const [images, setImages] = useState(null);
   const [images, setImages] = useState([
     {
-      original: modelImg,
-      thumbnail: modelImg,
+      original: modelImg1,
+      thumbnail: modelImg1,
     },
     {
-      original: modelImg,
-      thumbnail: modelImg,
+      original: modelImg2,
+      thumbnail: modelImg2,
     },
     {
-      original: modelImg,
-      thumbnail: modelImg,
+      original: modelImg3,
+      thumbnail: modelImg3,
     },
     {
-      original: modelImg,
-      thumbnail: modelImg,
+      original: modelImg4,
+      thumbnail: modelImg4,
     },
     {
-      original: modelImg,
-      thumbnail: modelImg,
+      original: modelImg1,
+      thumbnail: modelImg1,
     },
     {
-      original: modelImg,
-      thumbnail: modelImg,
+      original: modelImg3,
+      thumbnail: modelImg3,
     },
     {
-      original: modelImg,
-      thumbnail: modelImg,
+      original: modelImg4,
+      thumbnail: modelImg4,
+    },
+    {
+      original: modelImg2,
+      thumbnail: modelImg2,
     },
   ]);
 

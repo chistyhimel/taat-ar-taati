@@ -9,6 +9,7 @@ export const ProductCardConatiner = styled.div`
 
 export const CardImgContainer = styled.div`
   position: relative;
+  overflow: hidden;
   img {
     width: 100%;
     height: 100%;

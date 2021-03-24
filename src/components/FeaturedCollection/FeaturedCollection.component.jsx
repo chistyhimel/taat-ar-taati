@@ -13,8 +13,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PrimaryButton from "../Buttons/PrimaryButton.component";
+import { images } from "../ProductCard/data";
+import { useHistory } from "react-router";
 const FeaturedCollection = () => {
   const [featuredCollections, setFeaturedCollections] = useState("newInStore");
+  const history = useHistory();
   const sliderRef = useRef();
   const settings = {
     dots: false,
@@ -31,6 +34,9 @@ const FeaturedCollection = () => {
   const gotoPrev = () => {
     sliderRef.current.slickPrev();
   };
+
+  console.log(images);
+
   return (
     <>
       <Container>
@@ -46,11 +52,9 @@ const FeaturedCollection = () => {
             </button>
             <div className="product__container">
               <Slider {...settings} ref={sliderRef}>
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+                {images.map((img, idx) => (
+                  <ProductCard key={idx} img={img} idx={idx} />
+                ))}
               </Slider>
             </div>
             <button onClick={() => gotoNext()}>
@@ -59,7 +63,9 @@ const FeaturedCollection = () => {
             </button>
           </FeaturedCollectionCardContainer>
           <br />
-          <PrimaryButton>VIEW ALL PRODUCTS</PrimaryButton> <br />
+          <span onClick={() => history.push("/products")}>
+            <PrimaryButton>VIEW ALL PRODUCTS</PrimaryButton> <br />
+          </span>
         </FeaturedCollectionContainer>
       </Container>
     </>

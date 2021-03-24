@@ -1,27 +1,29 @@
 import styled from "styled-components";
 
-export const NavBarContainer = styled.div`
-  position: relative;
+export const NavBarContainerWrap = styled.div`
   background: #fff;
   border-bottom: 1px solid #ebebeb;
-  z-index: 2;
+  z-index: 10;
   position: sticky;
   top: 0;
+`;
+
+export const NavBarContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5% 0;
   & > * {
   }
 
   img {
-    margin: 0 auto;
-    display: block;
+    width: 75px;
+    height: 75px;
   }
 `;
 
 export const NavbarIconsContainer = styled.div`
   font-size: 22px;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
   & > * {
     margin-left: 25px;
     color: ${({ theme }) => theme.colors.primary};
@@ -30,11 +32,15 @@ export const NavbarIconsContainer = styled.div`
 `;
 
 export const NavItemsContainer = styled.div`
+  position: absolute;
+  bottom: 0;
   margin: 0 auto;
+  left: 0;
+  right: 0;
   width: 350px;
   display: flex;
   justify-content: space-between;
-  padding-top: 20px;
+  padding-top: 30px;
   p {
     cursor: pointer;
     &::after {
