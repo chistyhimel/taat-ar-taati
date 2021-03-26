@@ -1,6 +1,6 @@
 const theme = {
   colors: {
-    primary: "#441313",
+    primary: "#231f20",
     footerTitleText: "#cb7e7e",
   },
   borderRadius: "6px",

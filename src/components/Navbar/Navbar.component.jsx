@@ -7,36 +7,42 @@ import {
   NavItemsContainer,
 } from "./Navbar.style";
 import logo from "../../assets/images/logo.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-regular-svg-icons";
-import { faSearch, faShoppingBag } from "@fortawesome/free-solid-svg-icons";
 import SearchBar from "../SearchBar/SearchBar.component";
 import ShopCategories from "../ShopCategories/ShopCategories.component";
 import CartSidebar from "../CartSidebar/CartSidebar.component";
-import { useHistory } from "react-router";
+import { useHistory, useLocation } from "react-router";
+import searchIcon from "../../assets/icons/search.png";
+import personIcon from "../../assets/icons/person.png";
+import shoppingIcon from "../../assets/icons/shopping.png";
 
 const Navbar = () => {
   const history = useHistory();
+  const { pathname } = useLocation();
   const [searchBarOpen, setSearchBarOpen] = useState(false);
   const [shopCategoriesOpen, setShopCategoriesOpen] = useState(false);
   const [cartSidebarOpen, setCartSidebarState] = useState(false);
-  return (
+  console.log(pathname);
+  return pathname === "/checkout" ? null : (
     <>
       <NavBarContainerWrap>
         <Container>
           <NavBarContainer>
             <img src={logo} alt="" />
+
             <NavbarIconsContainer>
-              <FontAwesomeIcon icon={faUser} />
-              <FontAwesomeIcon
-                icon={faSearch}
+              <img src={personIcon} alt="" />
+              <img
+                src={searchIcon}
+                alt=""
                 onClick={() => setSearchBarOpen(!searchBarOpen)}
               />
-              <FontAwesomeIcon
-                icon={faShoppingBag}
+              <img
+                src={shoppingIcon}
+                alt=""
                 onClick={() => setCartSidebarState(true)}
               />
             </NavbarIconsContainer>
+
             <NavItemsContainer>
               <p onClick={() => history.push("/")}>Home</p>
               <p onMouseOver={() => setShopCategoriesOpen(true)}>Shop</p>
@@ -46,6 +52,7 @@ const Navbar = () => {
           </NavBarContainer>
         </Container>
       </NavBarContainerWrap>
+
       {/* ======================== */}
 
       <SearchBar searchBarState={[searchBarOpen, setSearchBarOpen]} />

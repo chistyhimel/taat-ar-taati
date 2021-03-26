@@ -11,7 +11,6 @@ import { useHistory } from "react-router";
 
 const ProductCard = ({ img, idx }) => {
   const history = useHistory();
-  console.log(img);
   return (
     <>
       <ProductCardConatiner onClick={() => history.push("/product-info")}>

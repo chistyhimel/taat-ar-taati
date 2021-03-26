@@ -12,7 +12,9 @@ export const NavBarContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5% 0;
+  width: 65%;
+  margin: 0 auto;
+  padding: 0.8% 0;
   & > * {
   }
 
@@ -23,10 +25,10 @@ export const NavBarContainer = styled.div`
 `;
 
 export const NavbarIconsContainer = styled.div`
-  font-size: 22px;
-  & > * {
+  img {
+    width: 22px;
+    height: 23px;
     margin-left: 25px;
-    color: ${({ theme }) => theme.colors.primary};
     cursor: pointer;
   }
 `;

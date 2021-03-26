@@ -10,12 +10,14 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { useLocation } from "react-router";
 import { Container } from "../../constants/container";
 import SecondaryButton from "../Buttons/SecondaryButton.component";
 import { FooterContainer, FooterContent } from "./Footer.style";
 
 const Footer = () => {
-  return (
+  const { pathname } = useLocation();
+  return pathname === "/checkout" ? null : (
     <>
       <FooterContainer>
         <Container>
@@ -54,7 +56,7 @@ const Footer = () => {
               <SecondaryButton>Subscribe</SecondaryButton>
             </div>
             <div className="copyright__section">
-              <p>Copyright © Indian Ethics. All Rights Reserved</p>
+              <p>Copyright © Taati ar Taat. All Rights Reserved</p>
               <div className="border" />
               <h2>
                 <FontAwesomeIcon icon={faCcMastercard} />

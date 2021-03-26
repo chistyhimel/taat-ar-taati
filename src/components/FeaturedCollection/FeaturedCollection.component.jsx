@@ -35,8 +35,6 @@ const FeaturedCollection = () => {
     sliderRef.current.slickPrev();
   };
 
-  console.log(images);
-
   return (
     <>
       <Container>
@@ -63,7 +61,7 @@ const FeaturedCollection = () => {
             </button>
           </FeaturedCollectionCardContainer>
           <br />
-          <span onClick={() => history.push("/products")}>
+          <span /*onClick={() => history.push("/products")}*/>
             <PrimaryButton>VIEW ALL PRODUCTS</PrimaryButton> <br />
           </span>
         </FeaturedCollectionContainer>

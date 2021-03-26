@@ -2,6 +2,7 @@ import React from "react";
 import {
   CartProductsSection,
   CheckoutContentContainer,
+  CheckoutPageButton,
   CuponCodeSection,
   PriceCalcSection,
 } from "./CheckoutContent.style";
@@ -25,17 +26,12 @@ const CheckoutContent = () => {
             <p>Dabu Kota Doria Silk Hand Block Printed Saree</p>
             <p>৳ 4400.00</p>
           </div>
-          <br />
-          <hr />
+
           <CuponCodeSection>
             <input type="text" placeholder="Gift card or discount code" />
-            <span>
-              <PrimaryButton>Apply</PrimaryButton>
-            </span>
+            <CheckoutPageButton>Apply</CheckoutPageButton>
           </CuponCodeSection>
-          <br />
-          <hr />
-          <br />
+
           <PriceCalcSection>
             <small>Subtotal</small>
             <p>৳ 4400.00</p>
