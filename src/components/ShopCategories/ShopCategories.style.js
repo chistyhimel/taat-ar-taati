@@ -5,9 +5,8 @@ export const ShopCategoriesContainer = styled.div`
   background-color: #fff;
   position: fixed;
   z-index: 5;
-  transform: ${({ shopCategoriesOpen }) =>
-    shopCategoriesOpen ? "translateY(0)" : "translateY(-100%)"};
-  transition: transform 0.3s ease-in-out;
+  display: ${({ shopCategoriesOpen }) =>
+    shopCategoriesOpen ? "block" : "none"};
 `;
 
 export const ShopCategoriesContent = styled.div`

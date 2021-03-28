@@ -13,9 +13,8 @@ const QuantitySelectorBox = () => {
           <button onClick={() => setQuantity(quantity - 1)}>-</button>
           <span>{quantity}</span>
           <button onClick={() => setQuantity(quantity + 1)}>+</button>
-
-          <u>Remove</u>
         </QuantitySelectorBoxContainer>
+        <u>Remove</u>
       </QuantitySelectorWrap>
     </>
   );

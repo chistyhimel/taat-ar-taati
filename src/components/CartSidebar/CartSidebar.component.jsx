@@ -54,10 +54,10 @@ const CartSidebar = ({ sidebarState }) => {
           <span
             onClick={() => {
               setCartSidebarState(false);
-              history.push("/checkout");
+              history.push("/cart");
             }}
           >
-            <PrimaryButton>Checkout . Bdt. 1255</PrimaryButton>
+            <PrimaryButton>View cart . Bdt. 1255</PrimaryButton>
           </span>
         </CartSidebarBottomSection>
       </CartSidebarContainer>

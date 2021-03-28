@@ -1,5 +1,14 @@
 import styled from "styled-components";
 
+export const TopBar = styled.div`
+  background: ${({ theme }) => theme.colors.primary};
+  text-align: center;
+  z-index: 99;
+  color: #fff;
+  padding: 10px 0;
+  font-size: 14px;
+`;
+
 export const NavBarContainerWrap = styled.div`
   background: #fff;
   border-bottom: 1px solid #ebebeb;
@@ -14,13 +23,14 @@ export const NavBarContainer = styled.div`
   align-items: center;
   width: 65%;
   margin: 0 auto;
-  padding: 0.8% 0;
+  padding: 0.9% 0;
   & > * {
   }
 
   img {
     width: 75px;
     height: 75px;
+    cursor: pointer;
   }
 `;
 

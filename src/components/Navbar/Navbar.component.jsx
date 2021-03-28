@@ -5,6 +5,7 @@ import {
   NavBarContainerWrap,
   NavbarIconsContainer,
   NavItemsContainer,
+  TopBar,
 } from "./Navbar.style";
 import logo from "../../assets/images/logo.svg";
 import SearchBar from "../SearchBar/SearchBar.component";
@@ -22,19 +23,30 @@ const Navbar = () => {
   const [shopCategoriesOpen, setShopCategoriesOpen] = useState(false);
   const [cartSidebarOpen, setCartSidebarState] = useState(false);
   console.log(pathname);
+
   return pathname === "/checkout" ? null : (
     <>
       <NavBarContainerWrap>
+        <TopBar>
+          <p>
+            We ship Worldwide | COD Available | Use code FIRSTBUY to get Tk 250
+            off on your 1st order above Tk 2500
+          </p>
+        </TopBar>
         <Container>
           <NavBarContainer>
-            <img src={logo} alt="" />
+            <img src={logo} alt="" onClick={() => history.push("/")} />
 
             <NavbarIconsContainer>
-              <img src={personIcon} alt="" />
+              <img
+                src={personIcon}
+                onClick={() => history.push("/sign-in")}
+                alt=""
+              />
               <img
                 src={searchIcon}
                 alt=""
-                onClick={() => setSearchBarOpen(!searchBarOpen)}
+                onClick={() => setSearchBarOpen(true)}
               />
               <img
                 src={shoppingIcon}
@@ -44,10 +56,25 @@ const Navbar = () => {
             </NavbarIconsContainer>
 
             <NavItemsContainer>
-              <p onClick={() => history.push("/")}>Home</p>
+              <p
+                onMouseOver={() => setShopCategoriesOpen(false)}
+                onClick={() => history.push("/")}
+              >
+                Home
+              </p>
               <p onMouseOver={() => setShopCategoriesOpen(true)}>Shop</p>
-              <p>About Us</p>
-              <p>Contact Us</p>
+              <p
+                onMouseOver={() => setShopCategoriesOpen(false)}
+                onClick={() => history.push("/about-us")}
+              >
+                About Us
+              </p>
+              <p
+                onMouseOver={() => setShopCategoriesOpen(false)}
+                onClick={() => history.push("/contact-us")}
+              >
+                Contact Us
+              </p>
             </NavItemsContainer>
           </NavBarContainer>
         </Container>

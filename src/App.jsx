@@ -7,6 +7,11 @@ import Home from "./Pages/Home.page";
 import ProductInfo from "./Pages/ProductInfo.page";
 import Checkout from "./Pages/Checkout.page";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import SignIn from "./Pages/SignIn.page";
+import SignUp from "./Pages/SignUp.page";
+import Cart from "./Pages/Cart.page";
+import AboutUs from "./Pages/AboutUs.page";
+import ContactUs from "./Pages/ContactUs.page";
 
 function App() {
   return (
@@ -19,6 +24,11 @@ function App() {
             <Route exact path="/products" component={Products} />
             <Route exact path="/product-info" component={ProductInfo} />
             <Route exact path="/checkout" component={Checkout} />
+            <Route exact path="/cart" component={Cart} />
+            <Route exact path="/sign-in" component={SignIn} />
+            <Route exact path="/sign-up" component={SignUp} />
+            <Route exact path="/about-us" component={AboutUs} />
+            <Route exact path="/contact-us" component={ContactUs} />
 
             {/* Page Not Found Here */}
             {/* <Route exact path="*" component={" "} /> */}

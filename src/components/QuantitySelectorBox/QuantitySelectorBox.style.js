@@ -3,6 +3,16 @@ import styled from "styled-components";
 export const QuantitySelectorWrap = styled.div`
   position: relative;
   width: 100%;
+
+  u {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
 `;
 
 export const QuantitySelectorBoxContainer = styled.div`
@@ -26,15 +36,5 @@ export const QuantitySelectorBoxContainer = styled.div`
   span {
     text-align: center;
     font-size: 16px;
-  }
-
-  u {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    font-size: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
   }
 `;
