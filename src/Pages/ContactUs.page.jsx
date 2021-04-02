@@ -5,6 +5,7 @@ const ContactUsContainer = styled.div`
   width: 50vw;
   margin: 0 auto;
   padding-bottom: 10%;
+
   h1 {
     font-size: 24px;
     font-weight: 400;

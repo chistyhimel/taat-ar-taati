@@ -15,6 +15,9 @@ import { useHistory, useLocation } from "react-router";
 import searchIcon from "../../assets/icons/search.png";
 import personIcon from "../../assets/icons/person.png";
 import shoppingIcon from "../../assets/icons/shopping.png";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Menubar from "../Menubar/Menubar.component";
 
 const Navbar = () => {
   const history = useHistory();
@@ -22,7 +25,7 @@ const Navbar = () => {
   const [searchBarOpen, setSearchBarOpen] = useState(false);
   const [shopCategoriesOpen, setShopCategoriesOpen] = useState(false);
   const [cartSidebarOpen, setCartSidebarState] = useState(false);
-  console.log(pathname);
+  const [mobileMenubar, setMobileMenubar] = useState(false);
 
   return pathname === "/checkout" ? null : (
     <>
@@ -35,6 +38,15 @@ const Navbar = () => {
         </TopBar>
         <Container>
           <NavBarContainer>
+            {/*---------- Mobile Hamburger Menu---------- */}
+
+            <FontAwesomeIcon
+              className="hamburger__icon"
+              icon={faBars}
+              size="2x"
+              onClick={() => setMobileMenubar(true)}
+            />
+
             <img src={logo} alt="" onClick={() => history.push("/")} />
 
             <NavbarIconsContainer>
@@ -80,13 +92,15 @@ const Navbar = () => {
         </Container>
       </NavBarContainerWrap>
 
-      {/* ======================== */}
+      {/* ====================={Search Bar, Sidebar}========================= */}
 
       <SearchBar searchBarState={[searchBarOpen, setSearchBarOpen]} />
       <ShopCategories
         shopCategoriesState={[shopCategoriesOpen, setShopCategoriesOpen]}
       />
       <CartSidebar sidebarState={[cartSidebarOpen, setCartSidebarState]} />
+      {/* ====================={Search Bar, Sidebar}========================= */}
+      <Menubar mobileMenubarState={[mobileMenubar, setMobileMenubar]} />
     </>
   );
 };

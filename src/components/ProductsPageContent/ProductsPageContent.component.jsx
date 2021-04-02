@@ -1,7 +1,8 @@
-import { faTh, faThLarge } from "@fortawesome/free-solid-svg-icons";
+import { faSquare, faTh, faThLarge } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { Container } from "../../constants/container";
+import useWindowDimensions from "../../utils/windowDimentions";
 import { images } from "../ProductCard/data";
 import ProductCard from "../ProductCard/ProductCard.component";
 import {
@@ -14,23 +15,29 @@ import {
 
 const ProductsPageContent = () => {
   const [changeLayout, setChangeLayout] = useState(false);
-
-  console.log(changeLayout);
+  const { height, width } = useWindowDimensions();
   return (
     <>
       <ProductsPageContentContainer>
         <h1>Products</h1>
         <ProductLayoutCustomize>
           <div className="left__section">
-            <LayoutCustomizeIcon>
+            <LayoutCustomizeIcon changeLayout={changeLayout}>
               <FontAwesomeIcon
                 icon={faThLarge}
                 onClick={() => setChangeLayout(true)}
               />
-              <FontAwesomeIcon
-                icon={faTh}
-                onClick={() => setChangeLayout(false)}
-              />
+              {width >= 768 ? (
+                <FontAwesomeIcon
+                  icon={faTh}
+                  onClick={() => setChangeLayout(false)}
+                />
+              ) : (
+                <FontAwesomeIcon
+                  icon={faSquare}
+                  onClick={() => setChangeLayout(false)}
+                />
+              )}
             </LayoutCustomizeIcon>
           </div>
           <div className="right__section">

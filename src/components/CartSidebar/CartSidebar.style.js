@@ -12,6 +12,10 @@ export const CartSidebarContainer = styled.div`
   transform: ${({ cartSidebarOpen }) =>
     cartSidebarOpen ? "translateX(0)" : "translateX(140%)"};
   transition: transform 0.3s ease-in-out;
+
+  @media (max-width: 560px) {
+    width: 80vw;
+  }
 `;
 
 export const CartSidebarTopSection = styled.div`
@@ -34,6 +38,13 @@ export const CartSidebarTopSection = styled.div`
     border-bottom: 1px solid lightgray;
     display: block;
     padding: 8px 0;
+
+    @media (max-width: 560px) {
+      font-size: 12px;
+    }
+    @media (max-width: 350px) {
+      font-size: 10px;
+    }
   }
 `;
 
@@ -57,6 +68,13 @@ export const CartSidebarBottomSection = styled.div`
   flex-direction: column;
   justify-content: space-between;
   border-top: 1px solid lightgray;
+
+  p {
+    @media (max-width: 560px) {
+      font-size: 12px;
+    }
+  }
+
   .whatsapp_contact {
     display: flex;
     justify-content: space-between;
@@ -67,5 +85,8 @@ export const CartSidebarBottomSection = styled.div`
   div {
     width: 100%;
     text-align: center;
+    @media (max-width: 400px) {
+      font-size: 10px;
+    }
   }
 `;

@@ -4,6 +4,13 @@ export const FeaturedCollectionContainer = styled.div`
   text-align: center;
   margin: 4% 0;
   color: ${({ theme }) => theme.colors.primary};
+
+  h4 {
+    @media (max-width: 560px) {
+      font-size: 12px;
+    }
+  }
+
   .featured__collection {
     display: flex;
     justify-content: space-between;
@@ -12,9 +19,19 @@ export const FeaturedCollectionContainer = styled.div`
     font-weight: 200;
     margin: 2% auto;
 
+    @media (max-width: 560px) {
+      width: 200px;
+      margin-top: 18px;
+    }
+
     p {
       cursor: pointer;
       color: ${({ theme }) => theme.colors.primary};
+
+      @media (max-width: 560px) {
+        font-size: 18px;
+      }
+
       &::after {
         content: "";
         display: block;
@@ -36,7 +53,9 @@ export const FeaturedCollectionCardContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100;
+  @media (max-width: 768px) {
+    margin: 20px 0;
+  }
   button {
     width: 40px;
     height: 40px;
@@ -46,6 +65,10 @@ export const FeaturedCollectionCardContainer = styled.div`
     box-shadow: 0 2px 10px rgb(54 54 54 / 15%);
     background-color: transparent;
     font-size: 18px;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   .product__container {
@@ -53,11 +76,27 @@ export const FeaturedCollectionCardContainer = styled.div`
     margin: 0 auto;
     overflow: hidden;
 
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+
     .slick-slide > div {
       margin: 0 20px;
+      @media (max-width: 1200px) {
+        margin: 0 10px;
+      }
+      @media (max-width: 560px) {
+        margin: 0 5px;
+      }
     }
     .slick-list {
       margin: 0 -20px;
+      @media (max-width: 1200px) {
+        margin: 0 -10px;
+      }
+      @media (max-width: 560px) {
+        margin: 0 -5px;
+      }
     }
   }
 `;

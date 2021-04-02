@@ -44,6 +44,10 @@ export const ProductCardSecondaryContainer = styled.div`
       P {
         font-size: ${({ theme }) => theme.fontSize.header.largeScreen};
         padding-bottom: 15px;
+
+        @media (max-width: 560px) {
+          font-size: 18px;
+        }
       }
       div {
         display: flex;

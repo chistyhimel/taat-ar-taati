@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const BannerContainer = styled.div`
   width: 100vw;
-  height: 60vw;
+  height: 65vw;
   @keyframes slideInFromLeft {
     0% {
       transform: scale(1.2);
@@ -11,6 +11,7 @@ export const BannerContainer = styled.div`
       transform: scale(1);
     }
   }
+
   img {
     width: 100%;
     /* height: 100%; */

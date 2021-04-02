@@ -26,6 +26,24 @@ const FeaturedCollection = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+    ],
   };
   const gotoNext = () => {
     sliderRef.current.slickNext();
@@ -39,7 +57,7 @@ const FeaturedCollection = () => {
     <>
       <Container>
         <FeaturedCollectionContainer>
-          <p>Featured Collection</p>
+          <h4>Featured Collection</h4>
           <div className="featured__collection">
             <p>New In Store</p>
             <p>On Sale</p>
@@ -48,6 +66,7 @@ const FeaturedCollection = () => {
             <button onClick={() => gotoPrev()}>
               <FontAwesomeIcon icon={faChevronLeft} />
             </button>
+
             <div className="product__container">
               <Slider {...settings} ref={sliderRef}>
                 {images.map((img, idx) => (
@@ -55,13 +74,13 @@ const FeaturedCollection = () => {
                 ))}
               </Slider>
             </div>
+
             <button onClick={() => gotoNext()}>
-              {" "}
               <FontAwesomeIcon icon={faChevronRight} />
             </button>
           </FeaturedCollectionCardContainer>
           <br />
-          <span /*onClick={() => history.push("/products")}*/>
+          <span onClick={() => history.push("/products")}>
             <PrimaryButton>VIEW ALL PRODUCTS</PrimaryButton> <br />
           </span>
         </FeaturedCollectionContainer>

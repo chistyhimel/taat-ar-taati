@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+export const ProductInfoWrap = styled.div``;
+
 export const ProductInfoContentContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -8,17 +10,32 @@ export const ProductInfoContentContainer = styled.div`
   height: auto;
   margin: 5% auto;
 
-  & > * {
+  @media (max-width: 1100px) {
+    width: 95vw;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
   }
 `;
 
 export const ProductImgContainer = styled.div`
   width: 50%;
 
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  .image-gallery-content .image-gallery-slide .image-gallery-image {
+    max-height: 100% !important;
+  }
+
   .image-gallery-thumbnails-wrapper.left .image-gallery-thumbnails,
   .image-gallery-thumbnails-wrapper.right .image-gallery-thumbnails {
     overflow-y: scroll;
-
+    @media (max-width: 768px) {
+      overflow-y: hidden;
+      overflow-x: scroll;
+    }
     ::-webkit-scrollbar {
       width: 0;
       background: transparent;
@@ -59,11 +76,15 @@ export const ProductImgContainer = styled.div`
 
 export const ProductsDetailsContainer = styled.div`
   width: 40%;
-  height: fit-content;
-  position: sticky;
-  bottom: 0;
-  overflow-y: auto;
   color: ${({ theme }) => theme.colors.primary};
+
+  @media (max-width: 1100px) {
+    width: 46%;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
   div {
     width: 100%;
     text-align: center;
@@ -107,10 +128,16 @@ export const SizeChartContainer = styled.div`
   div {
     display: flex;
     justify-content: space-between;
+    @media (max-width: 768px) {
+      flex-wrap: wrap;
+    }
+
     span {
       cursor: pointer;
       border: 1px solid lightgray;
       padding: 10px;
+      /* margin-right: 10px; */
+      margin-bottom: 10px;
     }
   }
 `;

@@ -30,7 +30,9 @@ const CartSidebar = ({ sidebarState }) => {
           </h1>
 
           <div className="offer__text">
-            <small>Spend Rs. 1 more and get free shipping within India!</small>
+            <small>
+              Spend Bdt. 1 more and get free shipping within Bangladesh!
+            </small>
           </div>
           <CartProductWrap>
             <CartProduct />
@@ -41,6 +43,7 @@ const CartSidebar = ({ sidebarState }) => {
             <CartProduct />
           </CartProductWrap>
         </CartSidebarTopSection>
+
         <CartSidebarBottomSection>
           <p>Recieve order notification via WhatsApp:</p>
           <div className="whatsapp_contact">

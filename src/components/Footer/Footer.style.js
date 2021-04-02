@@ -4,6 +4,10 @@ export const FooterContainer = styled.div`
   background: ${({ theme }) => theme.colors.primary};
   width: 100vw;
   padding: 5% 0;
+
+  @media (max-width: 560px) {
+    padding-top: 40px;
+  }
 `;
 
 export const FooterContent = styled.div`

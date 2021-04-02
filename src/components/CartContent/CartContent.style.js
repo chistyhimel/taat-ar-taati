@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+export const CartContentWrap = styled.div``;
+
 export const CartContentContainer = styled.div`
   width: 60vw;
   margin: 3% auto;
@@ -38,7 +40,7 @@ export const EstimateShipping = styled.div`
     }
     input {
       height: 45px;
-      width: 15%;
+      width: 20%;
       font-size: 16px;
       padding: 10px;
       border: 1px solid lightgray;

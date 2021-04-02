@@ -21,7 +21,7 @@ export const CardImgContainer = styled.div`
   &:hover img:last-child {
     position: static;
     opacity: 1;
-    transition: opacity 1s linear;
+    transition: opacity 0.2s linear;
   }
   &:hover img:first-child {
     position: absolute;

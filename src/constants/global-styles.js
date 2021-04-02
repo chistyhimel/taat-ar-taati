@@ -16,6 +16,10 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     overflow-x: hidden;
+    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -moz-user-select: none; /* mozilla browsers */
+    -khtml-user-select: none; /* webkit (konqueror) browsers */
+    -ms-user-select: none; /* IE10+ */ 
     .slick-prev, .slick-next{
     display: none !important;
 

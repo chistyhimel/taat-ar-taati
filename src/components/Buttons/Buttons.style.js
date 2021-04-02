@@ -18,6 +18,10 @@ export const PrimaryButtonContainer = styled.div`
     letter-spacing: 0.2em;
     color: #fff;
 
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
+
     &::after,
     &::before {
       content: " ";
@@ -81,6 +85,16 @@ export const SecondaryButtonContainer = styled.div`
     letter-spacing: 0.2em;
     color: #fff;
 
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
+    @media (max-width: 560px) {
+      font-size: 10px;
+      border: none;
+      background-color: #fff;
+      color: ${({ theme }) => theme.colors.primary};
+    }
+
     &::after,
     &::before {
       content: " ";
@@ -143,6 +157,10 @@ export const TertiaryButtonContainer = styled.div`
     overflow: hidden;
     letter-spacing: 0.2em;
     color: ${({ theme }) => theme.colors.primary};
+
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
 
     &::after,
     &::before {

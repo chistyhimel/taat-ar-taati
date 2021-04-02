@@ -5,9 +5,16 @@ export const SignInContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 560px) {
+    height: 90vh;
+  }
 `;
 
 export const SignInFormContainer = styled.div`
+  @media (max-width: 450px) {
+    width: 95vw;
+  }
   h1 {
     text-align: center;
     font-size: 24px;
@@ -15,7 +22,6 @@ export const SignInFormContainer = styled.div`
   }
   p {
     text-align: center;
-
     span {
       font-weight: 600;
       cursor: pointer;
@@ -23,7 +29,6 @@ export const SignInFormContainer = styled.div`
   }
   form {
     margin: 20px 0;
-
     .input__wrap {
       position: relative;
 
@@ -58,6 +63,10 @@ export const SignInFormContainer = styled.div`
       &:focus {
         border: 1px solid ${({ theme }) => theme.colors.primary};
         background-color: #e8f0fe;
+      }
+
+      @media (max-width: 450px) {
+        width: 100%;
       }
     }
     div {

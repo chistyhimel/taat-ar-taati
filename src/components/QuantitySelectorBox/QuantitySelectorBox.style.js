@@ -12,6 +12,11 @@ export const QuantitySelectorWrap = styled.div`
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
+
+    @media (max-width: 560px) {
+      position: relative;
+      top: 0;
+    }
   }
 `;
 
@@ -22,6 +27,11 @@ export const QuantitySelectorBoxContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 560px) {
+    width: 90px;
+    height: 35px;
+  }
 
   & > * {
     width: 33%;

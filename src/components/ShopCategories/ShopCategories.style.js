@@ -5,6 +5,7 @@ export const ShopCategoriesContainer = styled.div`
   background-color: #fff;
   position: fixed;
   z-index: 5;
+  border-top: 1px solid #ebebeb;
   display: ${({ shopCategoriesOpen }) =>
     shopCategoriesOpen ? "block" : "none"};
 `;

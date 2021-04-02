@@ -26,10 +26,10 @@ const Footer = () => {
               <p className="footer__titile_text">About the shop</p>
               <p>
                 Explore unique handcrafted products from the finest <br />{" "}
-                artisans of India
+                artisans of Bangladesh.
               </p>
               <p>Contact us: +880 xxxxxxxxxx</p>
-              <p>Email: hello@theindianethnicco.com</p>
+              <p>Email: hello@taati-ar-taat.com</p>
               <h3>
                 <FontAwesomeIcon icon={faFacebook} />
                 <FontAwesomeIcon icon={faInstagram} />

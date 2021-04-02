@@ -7,39 +7,82 @@ export const TopBar = styled.div`
   color: #fff;
   padding: 10px 0;
   font-size: 14px;
+  p {
+    @media (max-width: 768px) {
+      margin: 0 auto;
+      width: 95%;
+      font-size: 10px;
+    }
+    @media (max-width: 560px) {
+      font-size: 8px;
+    }
+  }
 `;
 
 export const NavBarContainerWrap = styled.div`
   background: #fff;
-  border-bottom: 1px solid #ebebeb;
   z-index: 10;
   position: sticky;
   top: 0;
+  border-bottom: 1px solid #ebebeb;
 `;
 
 export const NavBarContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 65%;
+  width: 60vw;
   margin: 0 auto;
   padding: 0.9% 0;
-  & > * {
+
+  @media (max-width: 1100px) {
+    width: 95vw;
+  }
+
+  @media (max-width: 768px) {
+    position: relative;
+    padding: 15px 0;
   }
 
   img {
     width: 75px;
     height: 75px;
     cursor: pointer;
+
+    @media (max-width: 768px) {
+      margin-left: 35px;
+    }
+    @media (max-width: 560px) {
+      width: 65px;
+      height: 65px;
+    }
+  }
+  .hamburger__icon {
+    display: none;
+    @media (max-width: 768px) {
+      display: block;
+      color: ${({ theme }) => theme.colors.primary};
+    }
   }
 `;
 
 export const NavbarIconsContainer = styled.div`
+  @media (max-width: 768px) {
+    & > :nth-child(1) {
+      display: none;
+    }
+  }
   img {
     width: 22px;
     height: 23px;
     margin-left: 25px;
     cursor: pointer;
+
+    @media (max-width: 560px) {
+      width: 20px;
+      height: 20px;
+      margin-left: 20px;
+    }
   }
 `;
 
@@ -53,6 +96,11 @@ export const NavItemsContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding-top: 30px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
   p {
     cursor: pointer;
     &::after {
