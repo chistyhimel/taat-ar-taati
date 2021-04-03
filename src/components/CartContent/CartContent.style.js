@@ -7,6 +7,10 @@ export const CartContentContainer = styled.div`
   margin: 3% auto;
   text-align: center;
 
+  @media (max-width: 1100px) {
+    width: 95vw;
+  }
+
   h1 {
     font-size: 24px;
     font-weight: 400;
@@ -21,6 +25,10 @@ export const EstimateShipping = styled.div`
       padding: 5% 5%;
       display: flex;
       justify-content: space-between;
+
+      @media (max-width: 560px) {
+        flex-direction: column;
+      }
     }
     legend {
       background: #fff;
@@ -34,6 +42,10 @@ export const EstimateShipping = styled.div`
       padding: 10px;
       cursor: pointer;
       border: 1px solid lightgray;
+      @media (max-width: 560px) {
+        width: 100%;
+        margin-bottom: 15px;
+      }
       &:focus {
         border: 1px solid ${({ theme }) => theme.colors.primary};
       }
@@ -44,6 +56,12 @@ export const EstimateShipping = styled.div`
       font-size: 16px;
       padding: 10px;
       border: 1px solid lightgray;
+
+      @media (max-width: 560px) {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
       &:focus {
         border: 1px solid ${({ theme }) => theme.colors.primary};
       }
@@ -59,17 +77,32 @@ export const CartPageButton = styled.button`
   outline: none;
   letter-spacing: 3px;
   text-transform: uppercase;
+
+  @media (max-width: 450px) {
+    width: 100%;
+    margin-top: 8px;
+  }
 `;
 
 export const ProductCartContainer = styled.div`
-  margin: 8% 0;
+  padding: 4% 0;
+  margin: 4% 0;
 
+  @media (max-width: 450px) {
+    border-top: 1px solid lightgray;
+    padding: 8% 0;
+    margin: 8% 0;
+  }
   .product__table__title {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid lightgray;
     padding-bottom: 10px;
     margin-bottom: 30px;
+
+    @media (max-width: 450px) {
+      display: none;
+    }
 
     & > :nth-child(1) {
       width: 50%;
@@ -83,6 +116,13 @@ export const ProductCartContainer = styled.div`
       width: 25%;
       text-align: right;
     }
+
+    p {
+      @media (max-width: 450px) {
+        font-size: 12px;
+        font-weight: bold;
+      }
+    }
   }
 
   .product__subtotal__section {
@@ -91,8 +131,19 @@ export const ProductCartContainer = styled.div`
     justify-content: space-between;
     text-align: left;
     padding-top: 15px;
+    position: relative;
+
+    @media (max-width: 450px) {
+      flex-direction: column;
+    }
+
     & > * {
       width: 30%;
+
+      @media (max-width: 450px) {
+        width: 100%;
+        margin-bottom: 20px;
+      }
     }
     section {
       textarea {
@@ -101,6 +152,7 @@ export const ProductCartContainer = styled.div`
     }
     & > :nth-child(3) {
       text-align: right;
+
       p {
         margin-bottom: 15px;
       }
@@ -110,15 +162,33 @@ export const ProductCartContainer = styled.div`
 
 export const CartContentProductContainer = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+
+  @media (max-width: 450px) {
+  }
+
+  & > :last-child {
+    @media (max-width: 450px) {
+      display: none;
+    }
+  }
+
+  p {
+    @media (max-width: 450px) {
+      font-size: 14px;
+    }
+  }
 
   section {
     width: 50%;
     display: flex;
     align-items: center;
     text-align: left;
+    @media (max-width: 450px) {
+      width: 70%;
+    }
+
     img {
       width: 25%;
       margin-right: 5%;
@@ -127,11 +197,16 @@ export const CartContentProductContainer = styled.div`
   div {
     margin: 0 auto;
     width: 12%;
+
+    @media (max-width: 450px) {
+      width: 30%;
+      padding-left: 10px;
+    }
+
     div {
       width: 100%;
     }
     u {
-      /* display: none; */
       position: static;
       display: block;
       bottom: 0;

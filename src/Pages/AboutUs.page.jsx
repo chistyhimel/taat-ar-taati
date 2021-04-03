@@ -8,11 +8,18 @@ const AboutUsContainer = styled.div`
   margin: 0 auto;
   padding-bottom: 10%;
 
+  @media (max-width: 900px) {
+    width: 90vw;
+  }
+
   h1 {
     font-size: 24px;
     font-weight: 400;
     text-align: center;
     margin: 5% 0;
+  }
+  p {
+    margin-top: 30px;
   }
   img {
     width: 60%;

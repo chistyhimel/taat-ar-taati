@@ -12,13 +12,18 @@ export const MenubarContainer = styled.div`
   width: 250px;
   z-index: 11;
   transform: ${({ mobileMenubar }) =>
-    mobileMenubar ? "translateX(0)" : "translateX(-100%)"};
+    mobileMenubar ? "translateX(0)" : "translateX(-120%)"};
   transition: transform 0.3s ease-in-out;
   padding: 18px 24px 0 18px;
+  overflow: hidden;
   @media (max-width: 768px) {
     display: block;
   }
+`;
 
+export const MenuItemsContainer = styled.div`
+  overflow-y: scroll;
+  z-index: 1;
   h1 {
     font-size: 20px;
     margin-bottom: 40px;
@@ -39,6 +44,8 @@ export const MenubarSocilMediaIcons = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
+  background: ${({ theme }) => theme.colors.primary};
+  z-index: 2;
   width: 100%;
   height: 50px;
   border-top: 1px solid rgba(255, 255, 255, 0.25);

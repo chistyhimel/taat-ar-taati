@@ -10,7 +10,8 @@ const CartContentProduct = () => {
         <section>
           <img src={modelImg} alt="" />
           <p>
-            Dabu Kota Doria Silk Hand Block Printed Saree <br /> Tk. 4,250
+            Dabu Kota Doria Silk Hand Block Printed Saree <br />
+            Tk. 4,250
           </p>
         </section>
 

@@ -6,6 +6,10 @@ const ContactUsContainer = styled.div`
   margin: 0 auto;
   padding-bottom: 10%;
 
+  @media (max-width: 900px) {
+    width: 90vw;
+  }
+
   h1 {
     font-size: 24px;
     font-weight: 400;
@@ -50,9 +54,9 @@ const ContactUs = () => {
           does not start in this format DOES NOT BELONG TO US!
           <br />
           <br />
-          <u>www.facebook.com/theindianethnicco</u> <br />
+          <u>www.facebook.com/</u> <br />
           <br />
-          <u>https://www.instagram.com/theindianethnicco/?hl=en </u> <br />
+          <u>https://www.instagram.com/ </u> <br />
           <br />
           <strong>
             <u>Address:</u>

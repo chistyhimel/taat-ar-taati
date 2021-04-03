@@ -8,7 +8,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { useHistory } from "react-router";
 import { useClickOutside } from "../../utils/OutsideClickDetact";
-import { MenubarContainer, MenubarSocilMediaIcons } from "./Menubar.style";
+import {
+  MenubarContainer,
+  MenubarSocilMediaIcons,
+  MenuItemsContainer,
+} from "./Menubar.style";
 import SubMenu from "./SubMenu.component";
 
 const Menubar = ({ mobileMenubarState }) => {
@@ -25,15 +29,17 @@ const Menubar = ({ mobileMenubarState }) => {
   return (
     <>
       <MenubarContainer mobileMenubar={mobileMenubar} ref={menubarRef}>
-        <h1 onClick={() => setMobileMenubar(false)}>✕</h1>
-        <p onClick={() => history.push("/")}>Home</p>
+        <MenuItemsContainer>
+          <h1 onClick={() => setMobileMenubar(false)}>✕</h1>
+          <p onClick={() => history.push("/")}>Home</p>
 
-        <p onClick={() => setOpenSubMenu(!openSubMenu)}>Shop</p>
-        <SubMenu openSubMenu={openSubMenu} />
+          <p onClick={() => setOpenSubMenu(!openSubMenu)}>Shop</p>
+          <SubMenu openSubMenu={openSubMenu} />
 
-        <p onClick={() => history.push("/about-us")}>About Us</p>
-        <p onClick={() => history.push("/contact-us")}>Contact Us</p>
-        <p onClick={() => history.push("/sign-in")}>Account</p>
+          <p onClick={() => history.push("/about-us")}>About Us</p>
+          <p onClick={() => history.push("/contact-us")}>Contact Us</p>
+          <p onClick={() => history.push("/sign-in")}>Account</p>
+        </MenuItemsContainer>
         <MenubarSocilMediaIcons>
           <FontAwesomeIcon icon={faFacebook} />
           <FontAwesomeIcon icon={faInstagram} />

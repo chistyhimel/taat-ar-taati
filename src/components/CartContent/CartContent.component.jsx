@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router";
-import PrimaryButton from "../Buttons/PrimaryButton.component";
+import CartProduct from "../CartProduct/CartProduct.component";
 import {
   CartContentContainer,
   CartContentWrap,
@@ -12,6 +12,7 @@ import CartContentProduct from "./CartContentProduct";
 
 const CartContent = () => {
   const history = useHistory();
+
   return (
     <>
       <CartContentWrap>
@@ -26,6 +27,8 @@ const CartContent = () => {
               <p>Quantity</p>
               <p>Total</p>
             </div>
+
+            <CartContentProduct />
             <CartContentProduct />
             <CartContentProduct />
 
@@ -36,11 +39,13 @@ const CartContent = () => {
                   <br /> WhatsApp Number: <input type="text" />
                 </p>
               </section>
+
               <section>
-                <label htmlFor="note">Add order note</label>
+                <label htmlFor="note">Add order note : </label>
                 <br />
                 <textarea name="" id="note" cols="30" rows="5"></textarea>
               </section>
+
               <section>
                 <p>
                   Total: Bdt. 8,650
