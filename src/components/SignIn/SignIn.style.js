@@ -69,6 +69,20 @@ export const SignInFormContainer = styled.div`
         width: 100%;
       }
     }
+
+    button,
+    input[type="submit"],
+    input[type="reset"] {
+      background: none;
+      color: inherit;
+      border: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
+      width: 100%;
+    }
+
     div {
       width: 100%;
       text-align: center;

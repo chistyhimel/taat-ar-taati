@@ -1,41 +1,62 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 import { useHistory } from "react-router";
 import PrimaryButton from "../Buttons/PrimaryButton.component";
 import { SignInContainer, SignInFormContainer } from "../SignIn/SignIn.style";
+import { SIGNIN_CALL } from "../../requests/services";
 
 const SignUpContent = () => {
+  const { register, handleSubmit } = useForm();
   const history = useHistory();
+
+  const onSubmit = (data) => {
+    if (data.phone.length === 11) {
+      // console.log(data);
+      SIGNIN_CALL(data).then((response) => console.log(response));
+    }
+  };
+
   return (
     <>
-      {" "}
       <SignInContainer>
         <SignInFormContainer>
           <h1>Register</h1>
           <br />
           <p>Please fill in the information below:</p>
-          <form>
+
+          <form onSubmit={handleSubmit(onSubmit)}>
             <div className="input__wrap">
-              <label htmlFor="first-name">First Name</label>
-              <input type="text" id="first-name" />
+              <label htmlFor="name">Name</label>
+              <input type="text" id="name" {...register("name")} />
             </div>
 
             <div className="input__wrap">
-              <label htmlFor="last-name">Last Name</label>
-              <input type="text" id="last-name" />
+              <label htmlFor="phone">Phone</label>
+              <input type="tel" id="phone" {...register("phone")} />
             </div>
 
-            <div className="input__wrap">
+            {/* <div className="input__wrap">
               <label htmlFor="email">Email</label>
               <input type="email" id="email" />
-            </div>
+            </div> */}
 
             <div className="input__wrap">
               <label htmlFor="password">Password</label>
-              <input type="password" id="password" />
-              <span>Forget password ?</span>
+              <input type="password" id="password" {...register("password")} />
             </div>
-            {/* <button type="submit"></button> */}
-            <PrimaryButton>Login</PrimaryButton>
+
+            <div className="input__wrap">
+              <label htmlFor="confirm_password">Confirm Password</label>
+              <input
+                type="password"
+                id="confirm_password"
+                {...register("password_confirmation")}
+              />
+            </div>
+
+            <button type="submit">
+              <PrimaryButton>Login</PrimaryButton>
+            </button>
           </form>
           <p>
             Already have an account ?
