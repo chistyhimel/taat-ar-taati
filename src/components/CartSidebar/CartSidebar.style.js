@@ -1,5 +1,17 @@
 import styled from "styled-components";
 
+export const CartSidebarWrapper = styled.div`
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  top: 0;
+  visibility: ${({ cartSidebarOpen }) =>
+    cartSidebarOpen ? "visiabel" : "hidden"};
+  transition: visibility 0.3s ease-out;
+`;
+
 export const CartSidebarContainer = styled.div`
   height: 100vh;
   width: 400px;
@@ -11,8 +23,13 @@ export const CartSidebarContainer = styled.div`
   box-shadow: 2px 0 10px rgb(54 54 54 / 20%), -2px 0 10px rgb(54 54 54 / 20%);
   transform: ${({ cartSidebarOpen }) =>
     cartSidebarOpen ? "translateX(0)" : "translateX(140%)"};
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 
+  @media (max-width: 768px) {
+    left: 0;
+    transform: ${({ cartSidebarOpen }) =>
+      cartSidebarOpen ? "translateX(0)" : "translateX(-140%)"};
+  }
   @media (max-width: 560px) {
     width: 80vw;
   }

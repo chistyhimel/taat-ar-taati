@@ -7,7 +7,6 @@ import {
   PriceCalcSection,
 } from "./CheckoutContent.style";
 import img from "../../assets/images/model-2.jpg";
-import PrimaryButton from "../Buttons/PrimaryButton.component";
 import ShippingInfoForm from "../ShippingInfoForm/ShippingInfoForm.component";
 const CheckoutContent = () => {
   return (

@@ -7,14 +7,41 @@ export const CheckoutContentContainer = styled.div`
   justify-content: space-between;
   margin: 0 auto;
   padding-top: 3%;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    background: none;
+    position: relative;
+  }
+
   & > * {
     width: 50%;
+
+    @media (max-width: 768px) {
+      width: 95vw;
+      margin: 0 auto;
+    }
   }
 `;
 
 export const CartProductsSection = styled.div`
   padding-right: 20%;
   padding-left: 3%;
+
+  @media (max-width: 1100px) {
+    padding-right: 10%;
+    padding-left: 2%;
+  }
+  @media (max-width: 900px) {
+    padding-right: 5%;
+    padding-left: 2%;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0;
+    margin-top: 140px;
+  }
+
   .cart_product {
     display: flex;
     justify-content: space-between;

@@ -26,7 +26,9 @@ export const ProductImgContainer = styled.div`
   }
 
   .image-gallery-content .image-gallery-slide .image-gallery-image {
-    max-height: 100% !important;
+    @media (max-width: 768px) {
+      /* max-height: 50% !important; */
+    }
   }
 
   .image-gallery-thumbnails-wrapper.left .image-gallery-thumbnails,

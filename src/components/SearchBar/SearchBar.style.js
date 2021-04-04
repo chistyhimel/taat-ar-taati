@@ -1,11 +1,20 @@
 import styled from "styled-components";
 
+export const SearchBarWrap = styled.div`
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  visibility: ${({ searchBarOpen }) => (searchBarOpen ? "visiabel" : "hidden")};
+  transition: visibility 0.3s ease-out;
+`;
+
 export const SearchBarContainer = styled.div`
   width: 100vw;
   background-color: #fff;
   border-top: 1px solid #ebebeb;
   position: fixed;
-  z-index: 5;
   transform: ${({ searchBarOpen }) =>
     searchBarOpen ? "translateY(0)" : "translateY(-100%)"};
   transition: transform 0.3s ease-in-out;

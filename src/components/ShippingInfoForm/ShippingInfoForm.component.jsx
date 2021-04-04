@@ -14,15 +14,18 @@ const ShippingInfoForm = () => {
   return (
     <>
       <ShippingInfoFormContainer>
-        <img src={logo} alt="" />
-        <h6>
-          Cart <FontAwesomeIcon icon={faAngleRight} /> Information
-          <FontAwesomeIcon icon={faAngleRight} /> Shipping
-          <FontAwesomeIcon icon={faAngleRight} /> Payment
-        </h6>
+        <div className="shipping__wrapper">
+          <img src={logo} alt="" />
+          <h6>
+            Cart <FontAwesomeIcon icon={faAngleRight} /> Information
+            <FontAwesomeIcon icon={faAngleRight} /> Shipping
+            <FontAwesomeIcon icon={faAngleRight} /> Payment
+          </h6>
+        </div>
 
         <div className="contact__info">
           <h1>Contact information</h1>
+          <br />
           <h5>Already have an account ? Log in</h5>
         </div>
 

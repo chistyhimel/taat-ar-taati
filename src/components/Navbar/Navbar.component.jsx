@@ -30,12 +30,12 @@ const Navbar = () => {
   return pathname === "/checkout" ? null : (
     <>
       <NavBarContainerWrap>
-        <TopBar>
+        {/* <TopBar>
           <p>
             We ship Worldwide | COD Available | Use code FIRSTBUY to get Tk 250
             off on your 1st order above Tk 2500
           </p>
-        </TopBar>
+        </TopBar> */}
         <Container>
           <NavBarContainer>
             {/*---------- Mobile Hamburger Menu---------- */}
@@ -47,7 +47,13 @@ const Navbar = () => {
               onClick={() => setMobileMenubar(true)}
             />
 
-            <img src={logo} alt="" onClick={() => history.push("/")} />
+            {/*---------- Mobile Hamburger Menu---------- */}
+            <img
+              src={logo}
+              alt=""
+              className="nav__logo"
+              onClick={() => history.push("/")}
+            />
 
             <NavbarIconsContainer>
               <img

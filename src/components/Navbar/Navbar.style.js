@@ -42,15 +42,16 @@ export const NavBarContainer = styled.div`
   @media (max-width: 768px) {
     position: relative;
     padding: 15px 0;
+    flex-direction: row-reverse;
   }
 
-  img {
+  .nav__logo {
     width: 75px;
     height: 75px;
     cursor: pointer;
 
     @media (max-width: 768px) {
-      margin-left: 35px;
+      margin-left: -50px;
     }
     @media (max-width: 560px) {
       width: 65px;
@@ -61,6 +62,7 @@ export const NavBarContainer = styled.div`
     display: none;
     @media (max-width: 768px) {
       display: block;
+      font-size: 25px;
       color: ${({ theme }) => theme.colors.primary};
     }
   }
@@ -68,20 +70,25 @@ export const NavBarContainer = styled.div`
 
 export const NavbarIconsContainer = styled.div`
   @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
     & > :nth-child(1) {
       display: none;
     }
   }
   img {
     width: 22px;
-    height: 23px;
-    margin-left: 25px;
+    height: auto;
     cursor: pointer;
-
+    margin-left: 20px;
+    @media (max-width: 768px) {
+      margin-left: 0px;
+      margin-right: 20px;
+    }
     @media (max-width: 560px) {
       width: 20px;
       height: 20px;
-      margin-left: 20px;
     }
   }
 `;

@@ -4,6 +4,7 @@ import {
   CartSidebarTopSection,
   CartSidebarBottomSection,
   CartProductWrap,
+  CartSidebarWrapper,
 } from "./CartSidebar.style";
 import { useClickOutside } from "../../utils/OutsideClickDetact";
 import CartProduct from "../CartProduct/CartProduct.component";
@@ -18,10 +19,10 @@ const CartSidebar = ({ sidebarState }) => {
   });
 
   return (
-    <>
+    <CartSidebarWrapper cartSidebarOpen={cartSidebarOpen}>
       <CartSidebarContainer
-        cartSidebarOpen={cartSidebarOpen}
         ref={cartSidebarRef}
+        cartSidebarOpen={cartSidebarOpen}
       >
         <CartSidebarTopSection>
           <h1>
@@ -64,7 +65,7 @@ const CartSidebar = ({ sidebarState }) => {
           </span>
         </CartSidebarBottomSection>
       </CartSidebarContainer>
-    </>
+    </CartSidebarWrapper>
   );
 };
 
