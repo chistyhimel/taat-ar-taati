@@ -9,10 +9,11 @@ const SignUpContent = () => {
   const { register, handleSubmit } = useForm();
   const history = useHistory();
 
-  const onSubmit = (data) => {
+  const onSubmit = (data, e) => {
     if (data.phone.length === 11) {
-      // console.log(data);
+      console.log(data);
       SIGNIN_CALL(data).then((response) => console.log(response));
+      // e.target.reset();
     }
   };
 

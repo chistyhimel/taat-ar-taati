@@ -4,7 +4,7 @@ import axios from "axios";
 let token = localStorage.getItem("token");
 
 const configParams = {
-  "Content-Type": "application/x-www-form-urlencoded",
+  "Content-Type": "application/json",
 };
 
 const userInfoConfigParams = {

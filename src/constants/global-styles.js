@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     overflow-x: hidden;
+    /* background-color: #231f20; */
     -webkit-user-select: none; /* webkit (safari, chrome) browsers */
     -moz-user-select: none; /* mozilla browsers */
     -khtml-user-select: none; /* webkit (konqueror) browsers */
