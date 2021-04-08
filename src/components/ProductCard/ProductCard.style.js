@@ -30,17 +30,16 @@ export const CardImgContainer = styled.div`
 `;
 
 export const CardText = styled.div`
-  font-size: ${({ theme }) => theme.fontSize.text.smallScreen};
+  font-size: 16px;
   text-align: center;
   color: ${({ theme }) => theme.colors.primary};
   font-weight: 400;
   margin-bottom: 5px;
 
-  ${devices.laptop`
-    font-size: ${({ theme }) => theme.fontSize.text.normalScreen};
-  `};
-
-  ${devices.desktopLg`
-    font-size: ${({ theme }) => theme.fontSize.text.largeScreen};
-  `};
+  @media (max-width: 1300px) {
+    font-size: 12px;
+  }
+  @media (max-width: 560px) {
+    font-size: 12px;
+  }
 `;

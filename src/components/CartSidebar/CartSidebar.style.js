@@ -15,7 +15,7 @@ export const CartSidebarWrapper = styled.div`
 export const CartSidebarContainer = styled.div`
   height: 100vh;
   width: 400px;
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.colors.secondary};
   position: fixed;
   top: 0;
   right: 0;
@@ -52,6 +52,7 @@ export const CartSidebarTopSection = styled.div`
     font-size: 15px;
     text-align: center;
     border-top: 1px solid lightgray;
+    color: ${({ theme }) => theme.colors.primary};
     border-bottom: 1px solid lightgray;
     display: block;
     padding: 8px 0;
@@ -87,6 +88,7 @@ export const CartSidebarBottomSection = styled.div`
   border-top: 1px solid lightgray;
 
   p {
+    color: ${({ theme }) => theme.colors.primary};
     @media (max-width: 560px) {
       font-size: 12px;
     }

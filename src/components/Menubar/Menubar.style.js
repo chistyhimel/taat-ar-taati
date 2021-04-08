@@ -40,6 +40,7 @@ export const MenuItemsContainer = styled.div`
     margin-bottom: 40px;
     cursor: pointer;
     width: fit-content;
+    color: ${({ theme }) => theme.colors.secondary};
   }
 
   p {
@@ -48,6 +49,7 @@ export const MenuItemsContainer = styled.div`
     font-size: 15px;
     padding-bottom: 20px;
     margin-bottom: 20px;
+    color: ${({ theme }) => theme.colors.secondary};
   }
 `;
 

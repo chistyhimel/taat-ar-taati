@@ -5,7 +5,6 @@ import {
   NavBarContainerWrap,
   NavbarIconsContainer,
   NavItemsContainer,
-  TopBar,
 } from "./Navbar.style";
 import logo from "../../assets/images/logo.svg";
 import SearchBar from "../SearchBar/SearchBar.component";

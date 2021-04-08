@@ -7,6 +7,7 @@ const AboutUsContainer = styled.div`
   width: 50vw;
   margin: 0 auto;
   padding-bottom: 10%;
+  color: ${({ theme }) => theme.colors.primary};
 
   @media (max-width: 900px) {
     width: 90vw;

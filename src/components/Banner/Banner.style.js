@@ -76,7 +76,7 @@ export const BannerContainer = styled.div`
     } */
 
     h1 {
-      color: #fff;
+      color: ${({ theme }) => theme.colors.secondary};
       margin-bottom: 10px;
 
       @media (max-width: 1100px) {

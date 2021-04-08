@@ -13,10 +13,10 @@ export const PrimaryButtonContainer = styled.div`
     padding: 14px 28px;
     border: 1px solid ${({ theme }) => theme.colors.primary};
     text-transform: uppercase;
-    font-size: ${({ theme }) => theme.fontSize.text.largeScreen};
+    font-size: 16px;
     overflow: hidden;
     letter-spacing: 0.2em;
-    color: #fff;
+    color: ${({ theme }) => theme.colors.secondary};
 
     @media (max-width: 768px) {
       font-size: 12px;
@@ -32,7 +32,7 @@ export const PrimaryButtonContainer = styled.div`
       bottom: 0;
       right: 0;
       left: 0;
-      background: #fff;
+      background: ${({ theme }) => theme.colors.secondary};
       z-index: -1;
     }
     span {
@@ -78,12 +78,12 @@ export const SecondaryButtonContainer = styled.div`
     text-decoration: none;
     background: transparent;
     padding: 14px 28px;
-    border: 1px solid #fff;
+    border: 1px solid ${({ theme }) => theme.colors.secondary};
     text-transform: uppercase;
-    font-size: ${({ theme }) => theme.fontSize.text.largeScreen};
+    font-size: 16px;
     overflow: hidden;
     letter-spacing: 0.2em;
-    color: #fff;
+    color: ${({ theme }) => theme.colors.secondary};
 
     @media (max-width: 768px) {
       font-size: 12px;
@@ -91,7 +91,7 @@ export const SecondaryButtonContainer = styled.div`
     @media (max-width: 560px) {
       font-size: 10px;
       border: none;
-      background-color: #fff;
+      background-color: ${({ theme }) => theme.colors.secondary};
       color: ${({ theme }) => theme.colors.primary};
     }
 
@@ -105,7 +105,7 @@ export const SecondaryButtonContainer = styled.div`
       bottom: 0;
       right: 0;
       left: 0;
-      background: #fff;
+      background: ${({ theme }) => theme.colors.secondary};
       z-index: -1;
     }
     span {
@@ -153,7 +153,7 @@ export const TertiaryButtonContainer = styled.div`
     padding: 14px 28px;
     border: 1px solid rgba(77, 70, 70, 0.2);
     text-transform: uppercase;
-    font-size: ${({ theme }) => theme.fontSize.text.largeScreen};
+    font-size: 16px;
     overflow: hidden;
     letter-spacing: 0.2em;
     color: ${({ theme }) => theme.colors.primary};
@@ -181,7 +181,7 @@ export const TertiaryButtonContainer = styled.div`
       transition: color 350ms ease;
     }
     &:hover span {
-      color: #fff;
+      color: ${({ theme }) => theme.colors.secondary};
     }
     &::before {
       transform: translateX(-101%);

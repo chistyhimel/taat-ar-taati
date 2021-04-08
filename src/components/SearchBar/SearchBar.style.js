@@ -12,7 +12,7 @@ export const SearchBarWrap = styled.div`
 
 export const SearchBarContainer = styled.div`
   width: 100vw;
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.colors.secondary};
   border-top: 1px solid #ebebeb;
   position: fixed;
   transform: ${({ searchBarOpen }) =>
@@ -36,6 +36,7 @@ export const SearchBarContentWrap = styled.div`
   .icon {
     width: 5%;
     cursor: pointer;
+    color: ${({ theme }) => theme.colors.primary};
   }
   input {
     width: 90%;
@@ -43,6 +44,7 @@ export const SearchBarContentWrap = styled.div`
     font-size: 20px;
     border: none;
     outline: none;
+    background: ${({ theme }) => theme.colors.secondary};
     @media (max-width: 1100px) {
       padding-left: 20px;
     }

@@ -12,6 +12,7 @@ export const QuantitySelectorWrap = styled.div`
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
+    color: ${({ theme }) => theme.colors.primary};
 
     @media (max-width: 560px) {
       position: relative;
@@ -42,9 +43,11 @@ export const QuantitySelectorBoxContainer = styled.div`
     outline: none;
     background: transparent;
     font-size: 26px;
+    color: ${({ theme }) => theme.colors.primary};
   }
   span {
     text-align: center;
     font-size: 16px;
+    color: ${({ theme }) => theme.colors.primary};
   }
 `;

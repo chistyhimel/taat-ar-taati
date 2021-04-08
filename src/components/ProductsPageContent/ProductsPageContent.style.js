@@ -54,7 +54,6 @@ export const LayoutCustomizeIcon = styled.div`
 
   & > * {
     margin: 0 0 0 15px;
-    /* color: ${({ theme }) => theme.colors.primary}; */
     color: lightgray;
 
     @media (max-width: 400px) {
@@ -63,10 +62,12 @@ export const LayoutCustomizeIcon = styled.div`
   }
 
   & > :nth-child(1) {
-    color: ${({ changeLayout }) => (changeLayout ? "black" : "lightgray")};
+    color: ${({ changeLayout, theme }) =>
+      changeLayout ? theme.colors.primary : "#ABABAB"};
   }
   & > :nth-child(2) {
-    color: ${({ changeLayout }) => (changeLayout ? "lightgray" : "black")};
+    color: ${({ changeLayout, theme }) =>
+      changeLayout ? "#ABABAB" : theme.colors.primary};
   }
   @media (max-width: 400px) {
     width: 90px;
@@ -78,6 +79,7 @@ export const ProductCustomizeText = styled.p`
   padding: 18px 45px;
   border-left: 1px solid #ebebeb;
   font-size: 15px;
+  color: ${({ theme }) => theme.colors.primary};
 
   @media (max-width: 768px) {
     width: 50%;

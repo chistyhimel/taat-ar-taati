@@ -5,6 +5,7 @@ export const SignInContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  color: ${({ theme }) => theme.colors.primary};
 
   @media (max-width: 560px) {
     height: 90vh;
@@ -45,7 +46,7 @@ export const SignInFormContainer = styled.div`
     label {
       cursor: pointer;
       text-align: left;
-      background-color: #fff;
+      background-color: ${({ theme }) => theme.colors.secondary};
       position: absolute;
       top: -10px;
       left: 10px;
@@ -60,6 +61,7 @@ export const SignInFormContainer = styled.div`
       margin-bottom: 20px;
       padding: 10px;
       font-size: 14px;
+      background-color: ${({ theme }) => theme.colors.secondary};
       &:focus {
         border: 1px solid ${({ theme }) => theme.colors.primary};
         background-color: #e8f0fe;

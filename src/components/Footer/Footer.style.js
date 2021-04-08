@@ -16,7 +16,7 @@ export const FooterContent = styled.div`
   flex-wrap: wrap;
 
   div {
-    color: #fff;
+    color: ${({ theme }) => theme.colors.secondary};
     @media (max-width: 560px) {
       width: 100%;
       margin-bottom: 10%;

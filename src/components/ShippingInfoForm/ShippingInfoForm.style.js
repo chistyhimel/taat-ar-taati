@@ -5,6 +5,7 @@ export const ShippingInfoFormContainer = styled.div`
   padding-right: 3%;
   padding-bottom: 3%;
   height: auto;
+  color: ${({ theme }) => theme.colors.primary};
 
   @media (max-width: 1100px) {
     padding-left: 10%;

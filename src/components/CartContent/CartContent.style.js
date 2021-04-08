@@ -6,6 +6,7 @@ export const CartContentContainer = styled.div`
   width: 60vw;
   margin: 3% auto;
   text-align: center;
+  color: ${({ theme }) => theme.colors.primary};
 
   @media (max-width: 1100px) {
     width: 95vw;
@@ -31,7 +32,7 @@ export const EstimateShipping = styled.div`
       }
     }
     legend {
-      background: #fff;
+      background: color: ${({ theme }) => theme.colors.secondary};
       padding: 5px 10px;
       font-size: 18px;
     }
@@ -70,7 +71,7 @@ export const EstimateShipping = styled.div`
 `;
 export const CartPageButton = styled.button`
   background-color: ${({ theme }) => theme.colors.primary};
-  color: #fff;
+  color: ${({ theme }) => theme.colors.secondary};
   height: 45px;
   padding: 0 20px;
   border: none;
@@ -160,6 +161,8 @@ export const ProductCartContainer = styled.div`
   }
 `;
 
+//////// Cart Content Product Container ////////
+
 export const CartContentProductContainer = styled.div`
   display: flex;
   align-items: center;
@@ -175,6 +178,7 @@ export const CartContentProductContainer = styled.div`
   }
 
   p {
+    color: ${({ theme }) => theme.colors.primary};
     @media (max-width: 450px) {
       font-size: 14px;
     }

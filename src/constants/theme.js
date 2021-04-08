@@ -1,9 +1,26 @@
-const theme = {
+const LightTheme = {
   colors: {
     primary: "#231f20",
-    // primary: "#ffff",
+    secondary: "#FFFF",
+    footer: "#231f20",
     footerTitleText: "#cb7e7e",
+    footerText: "#FFFF",
   },
+};
+
+const DarkTheme = {
+  colors: {
+    primary: "#FFFF",
+    secondary: "#231f20",
+    footer: "#231f20",
+    footerTitleText: "#cb7e7e",
+    footerText: "#FFFF",
+  },
+};
+
+const themes = {
+  light: LightTheme,
+  dark: DarkTheme,
   borderRadius: "6px",
   fontSize: {
     text: {
@@ -20,4 +37,4 @@ const theme = {
   },
 };
 
-export default theme;
+export default themes;

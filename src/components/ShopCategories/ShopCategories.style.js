@@ -13,10 +13,9 @@ export const ShopCategoriesWrapper = styled.div`
 
 export const ShopCategoriesContainer = styled.div`
   width: 100vw;
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.colors.secondary};
   position: fixed;
   z-index: 5;
-  border-top: 1px solid #ebebeb;
 
   border-bottom: 1px solid lightgray;
 `;
@@ -28,6 +27,7 @@ export const ShopCategoriesContent = styled.div`
 
   div {
     small {
+      color: ${({ theme }) => theme.colors.primary};
     }
     p {
       color: ${({ theme }) => theme.colors.primary};

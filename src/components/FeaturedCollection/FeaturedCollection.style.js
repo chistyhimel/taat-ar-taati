@@ -65,6 +65,8 @@ export const FeaturedCollectionCardContainer = styled.div`
     box-shadow: 0 2px 10px rgb(54 54 54 / 15%);
     background-color: transparent;
     font-size: 18px;
+    background: ${({ theme }) => theme.colors.secondary};
+    color: ${({ theme }) => theme.colors.primary};
 
     @media (max-width: 768px) {
       display: none;

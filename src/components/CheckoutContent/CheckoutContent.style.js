@@ -2,7 +2,11 @@ import styled from "styled-components";
 
 export const CheckoutContentContainer = styled.div`
   height: auto;
-  background: linear-gradient(90deg, #ffff 50%, #ededed 50%);
+  background: linear-gradient(
+    90deg,
+    ${({ theme }) => theme.colors.secondary} 50%,
+    #ededed 50%
+  );
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -27,7 +31,7 @@ export const CheckoutContentContainer = styled.div`
 export const CartProductsSection = styled.div`
   padding-right: 20%;
   padding-left: 3%;
-
+  color: ${({ theme }) => theme.colors.primary};
   @media (max-width: 1100px) {
     padding-right: 10%;
     padding-left: 2%;
@@ -84,9 +88,9 @@ export const PriceCalcSection = styled.div`
 export const CheckoutPageButton = styled.button`
   cursor: pointer;
   background: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.secondary};
   border: none;
   border-radius: 3px;
-  color: white;
   font-weight: 500;
   padding: 15px 25px;
 `;

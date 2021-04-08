@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Alegreya', serif;
+
   }
   *:focus {
     outline: none;
@@ -16,13 +16,18 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     overflow-x: hidden;
-    /* background-color: #231f20; */
     -webkit-user-select: none; /* webkit (safari, chrome) browsers */
     -moz-user-select: none; /* mozilla browsers */
     -khtml-user-select: none; /* webkit (konqueror) browsers */
     -ms-user-select: none; /* IE10+ */
+    background: ${({ theme }) => theme.colors.secondary};
     
-
+    h1{
+      font-family: 'Vidaloka', serif;
+    }
+    p, h5,h6,small,button,a{
+      font-family: 'Lato', sans-serif;
+    }
     
     .slick-prev, .slick-next{
     display: none !important;

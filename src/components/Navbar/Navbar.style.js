@@ -20,7 +20,7 @@ export const TopBar = styled.div`
 `;
 
 export const NavBarContainerWrap = styled.div`
-  background: #fff;
+  background: ${({ theme }) => theme.colors.secondary};
   z-index: 10;
   position: sticky;
   top: 0;
@@ -103,6 +103,7 @@ export const NavItemsContainer = styled.div`
   display: flex;
   justify-content: space-between;
   padding-top: 30px;
+  color: ${({ theme }) => theme.colors.primary};
 
   @media (max-width: 768px) {
     display: none;

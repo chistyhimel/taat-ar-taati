@@ -25,7 +25,7 @@ export const ProductCardSecondaryContainer = styled.div`
     left: 0;
     height: 100%;
     width: 100%;
-    color: #fff;
+    color: ${({ theme }) => theme.colors.secondary};
     background-image: linear-gradient(
       to top,
       rgba(4, 4, 4, 0.65),
@@ -42,7 +42,7 @@ export const ProductCardSecondaryContainer = styled.div`
       flex-direction: column;
       justify-content: space-between;
       P {
-        font-size: ${({ theme }) => theme.fontSize.header.largeScreen};
+        font-size: 26px;
         padding-bottom: 15px;
 
         @media (max-width: 560px) {
