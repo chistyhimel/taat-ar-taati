@@ -5,16 +5,16 @@ import GlobalStyle from "./constants/global-styles";
 import themes from "./constants/theme";
 import Footer from "./components/Footer/Footer.component";
 import Navbar from "./components/Navbar/Navbar.component";
-import Products from "./Pages/Products.page";
-import Home from "./Pages/Home.page";
-import ProductInfo from "./Pages/ProductInfo.page";
-import Checkout from "./Pages/Checkout.page";
+import Products from "./pages/Products.page";
+import Home from "./pages/Home.page";
+import ProductInfo from "./pages/ProductInfo.page";
+import Checkout from "./pages/Checkout.page";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
-import SignIn from "./Pages/SignIn.page";
-import SignUp from "./Pages/SignUp.page";
-import Cart from "./Pages/Cart.page";
-import AboutUs from "./Pages/AboutUs.page";
-import ContactUs from "./Pages/ContactUs.page";
+import SignIn from "./pages/SignIn.page";
+import SignUp from "./pages/SignUp.page";
+import Cart from "./pages/Cart.page";
+import AboutUs from "./pages/AboutUs.page";
+import ContactUs from "./pages/ContactUs.page";
 import SwitchButton from "./components/SwitchButton/SwitchButton.component";
 
 function App() {
