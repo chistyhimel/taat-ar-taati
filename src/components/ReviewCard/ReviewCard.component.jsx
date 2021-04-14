@@ -29,6 +29,7 @@ const ReviewCard = () => {
         </small>
         <br />
         <img src={pdImg} alt="" />
+        <br />
         <p>Indigo Flower Block Print Fabric</p>
       </ReviewCardContainer>
     </>

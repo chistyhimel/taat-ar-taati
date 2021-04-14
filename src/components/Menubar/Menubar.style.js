@@ -92,4 +92,16 @@ export const SubmenuContainer = styled.div`
 
 // ------------------ChildmenuBar------------------//
 
-export const ChildMenuContainer = styled.div``;
+export const ChildMenuContainer = styled.div`
+  transform: ${({ childMenuOpen }) =>
+    childMenuOpen ? "scaleY(1)" : "scaleY(0)"};
+  transform-origin: top;
+  transition: transform 0.26s ease;
+
+  p {
+    padding-left: 40px;
+    border: none;
+    margin: 0;
+    text-transform: capitalize;
+  }
+`;

@@ -28,6 +28,8 @@ const SwitchButton = ({ themeState }) => {
           offColor="#000000"
           onColor="#F2F2F2"
           className="react-switch"
+          height={25}
+          width={55}
           uncheckedIcon={
             <div
               style={{
@@ -51,7 +53,7 @@ const SwitchButton = ({ themeState }) => {
                 alignItems: "center",
                 height: "100%",
                 fontSize: 15,
-                color: "orange",
+                color: "#F0671F",
                 paddingRight: 2,
               }}
             >

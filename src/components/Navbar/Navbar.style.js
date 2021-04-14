@@ -69,6 +69,7 @@ export const NavBarContainer = styled.div`
 `;
 
 export const NavbarIconsContainer = styled.div`
+  color: red;
   @media (max-width: 768px) {
     display: flex;
     align-items: center;
@@ -82,13 +83,14 @@ export const NavbarIconsContainer = styled.div`
     height: auto;
     cursor: pointer;
     margin-left: 20px;
+
     @media (max-width: 768px) {
       margin-left: 0px;
       margin-right: 20px;
     }
     @media (max-width: 560px) {
       width: 20px;
-      height: 20px;
+      height: auto;
     }
   }
 `;

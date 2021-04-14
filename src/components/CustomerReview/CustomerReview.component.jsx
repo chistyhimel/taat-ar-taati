@@ -67,6 +67,7 @@ const CustomerReview = () => {
         </ReviewStarsContainer>
         <p>from 1789 reviews</p>
         <br />
+        <br />
         <Slider {...settings} ref={customeSlider}>
           <ReviewCard />
           <ReviewCard />
